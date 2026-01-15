@@ -7,8 +7,8 @@ function Header() {
   return <h1>Vite + React</h1>;
 }
 
-const Header2 = () => {
-  return <h1>Vite + React</h1>;
+const Header2 = ({ firstName }: { firstName: string }) => {
+  return <h1>Привет {firstName}</h1>;
 };
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Header2 />
+      <Header2 firstName={"Andrey"} />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
